@@ -10,6 +10,7 @@ class ResumesController < ApplicationController
   end
 
   def show
+    @resume = Resume.find(params[:id])
   end
 
   def edit
@@ -19,6 +20,12 @@ class ResumesController < ApplicationController
   end
 
   def destroy
+  end
+
+  def instructions
+  end
+
+  def home
   end
 
 end

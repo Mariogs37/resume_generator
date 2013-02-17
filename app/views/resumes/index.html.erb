@@ -1,0 +1,9 @@
+<ol>
+  <% @resumes.each do |resume| %>
+  <li>
+    <ul>
+      <li><%= link_to(resume.name, resume) %></li>
+    </ul>
+  </li>
+  <% end %>
+</ol>

@@ -1,0 +1,166 @@
+<html>
+
+    <head>
+        <title>Ben Clayman's Resume</title>
+        <style type="text/css">
+            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after, q:before, q:after {
+                content:'';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+        </style>
+        <style type="text/css">
+
+            body {
+              margin: 20px;
+            }
+
+            section {
+              line-height: 1.2em;
+            }
+
+            h1 {
+                font-size: 40px;
+                line-height: 1.4em;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            h5 {
+                font-size: 16px;
+            }
+            .center {
+                text-align: center;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .italic {
+                font-style: italic;
+            }
+            .date {
+                float: right;
+            }
+
+            .extra_padding {
+              padding-top: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="center">
+             <h1 class="bold"><%= @resume.name %></h1>
+
+             <h5><%= @resume.address %>
+    </h5>
+
+             <h5><%= @resume.phone %> | <%= @resume.email %></h5>
+
+        </div>
+        <section>
+             <h3 class="bold extra_padding">PROFESSIONAL EXPERIENCE</h3>
+
+            <hr>
+            <div>
+              <span class="bold"><%= @resume.work1 %></span>
+              <span class="date"><%= @resume.location1 %></span>
+            </div>
+            <div>
+              <span class="italic"><%= @resume.role1 %></span>
+              <span class="date"><%= @resume.date_range1 %></span>
+            </div>
+            <ul>
+                <li><%= @resume.work_bullet_1_1 %></li>
+                <li><%= @resume.work_bullet_1_2 %></li>
+                <ul>
+                    <li><%= @resume.work_bullet_1_3 %></li>
+                </ul>
+            </ul>
+        </section>
+        <section>
+            <div>
+              <span class="bold"><%= @resume.work2 %></span>
+              <span class="date"><%= @resume.location2 %></span>
+            </div>
+            <div>
+              <span class="italic"><%= @resume.role2 %></span>
+              <span class="date"><%= @resume.date_range2 %></span>
+            </div>
+                <ul>
+                    <li><%= @resume.work_bullet_2_1 %></li>
+                    <li><%= @resume.work_bullet_2_2 %></li>
+                    <li><%= @resume.work_bullet_2_3 %></li>
+            </ul>
+            <div>
+              <span class="bold"><%= @resume.work3 %></span>
+              <span class="date"><%= @resume.location3 %></span>
+            </div>
+            <div>
+              <span class="italic"><%= @resume.role3 %></span>
+              <span class="date"><%= @resume.date_range3 %></span>
+            </div>
+                <ul>
+                    <li><%= @resume.work_bullet_3_1 %></li>
+                    <li><%= @resume.work_bullet_3_2 %></li>
+                    <li><%= @resume.work_bullet_3_3 %></li>
+            </ul>
+        </section>
+
+        <section>
+             <h3 class="bold extra_padding">EDUCATION</h3>
+            <hr>
+            <div>
+              <span class="bold"><%= @resume.college %></span>
+              <span class="date"><%= @resume.college_location %></span>
+            </div>
+            <div>
+              <span class="italic"><%= @resume.degree_type %> in <%= @resume.degree_subject %></span>
+              <span class="date">Class of <%= @resume.college_year %></span>
+            </div>
+            <ul>
+                <li >
+                    <span class="bold">GPA:</span> <%= @resume.gpa %> / 4.00</li>
+                <li>
+                    <span class="bold">Relevant Coursework:</span> <%= @resume.relevant_coursework %></li>
+            </ul>
+            <div>
+              <span class="bold"><%= @resume.hs %></span>
+              <span class="date"><%= @resume.hs_location %></span>
+            </div>
+            <div>
+              <span class="italic">Diploma</span>
+              <span class="date">Class of <%= @resume.hs_year %></span>
+            </div>
+        </section>
+        <section>
+             <h3 class="bold extra_padding">SKILLS, CERTIFICATIONS, & OTHER</h3>
+
+            <hr>
+            <div>
+                <span class="bold">Interests: </span><%= @resume.interests %></div>
+        </section>
+    </body>
+
+</html>
